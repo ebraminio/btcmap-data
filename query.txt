@@ -1,7 +1,8 @@
 [out:json][timeout:300];
+area(id:3600304938)->.searchArea; /* {{geocodeArea:IR}}->.searchArea; */
 (
-    node["payment:bitcoin"="yes"];
-    way["payment:bitcoin"="yes"];
-    relation["payment:bitcoin"="yes"];
+  node["historic"](area.searchArea);
+  way["historic"](area.searchArea);
+  relation["historic"](area.searchArea);
 );
 out center meta;
